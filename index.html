@@ -6,7 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Guarda tu coche con un toque, vuelve guiado por voz, añade fotos y notas y recibe alertas del parquímetro." />
   <title>UbicaTuCar</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icon.png" />
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -18,13 +23,11 @@
       padding: 4rem 1rem;
       text-align: center;
     }
+    .btn-appstore img {
+      height: 50px;
+    }
     .btn-appstore {
-      background-color: #0d6efd;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      color: white;
-      font-size: 1.1rem;
-      border-radius: 0.5rem;
+      display: inline-block;
       margin-top: 1rem;
     }
     .features li::before {
@@ -34,6 +37,15 @@
       max-width: 100%;
       border-radius: 1rem;
       box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    .footer-links a {
+      margin: 0 1rem;
+      color: #6c757d;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -42,20 +54,25 @@
   <section class="hero">
     <h1>UbicaTuCar</h1>
     <h2>Aparca, guarda y vuelve fácilmente.</h2>
-    <a href="#" class="btn btn-appstore">Consíguelo en la App Store</a>
+    <a href="#" class="btn-appstore" title="Descargar en App Store">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+    </a>
   </section>
 
   <section class="container my-5">
     <h3 class="text-center mb-4">Capturas de pantalla</h3>
-    <div class="row screenshots">
-      <div class="col-md-4 mb-3">
-        <img src="screenshot1.png" alt="Captura 1" />
+    <div class="row screenshots justify-content-center">
+      <div class="col-md-3 col-6 mb-3">
+        <img src="Inicio.png" alt="Inicio" />
       </div>
-      <div class="col-md-4 mb-3">
-        <img src="screenshot2.png" alt="Captura 2" />
+      <div class="col-md-3 col-6 mb-3">
+        <img src="Parquimetro.png" alt="Parquímetro" />
       </div>
-      <div class="col-md-4 mb-3">
-        <img src="screenshot3.png" alt="Captura 3" />
+      <div class="col-md-3 col-6 mb-3">
+        <img src="AparGuar.png" alt="Aparcar y Guardar" />
+      </div>
+      <div class="col-md-3 col-6 mb-3">
+        <img src="Map.png" alt="Mapa" />
       </div>
     </div>
   </section>
@@ -80,7 +97,11 @@
   </section>
 
   <footer class="text-center text-muted py-4">
-    © 2025 UbicaTuCar — contacto@ubicatucar.com
+    <div class="footer-links mb-2">
+      <a href="politica-privacidad.html" target="_blank" rel="noopener">Política de Privacidad</a> |
+      <a href="mailto:contacto@ubicatucar.com">contacto@ubicatucar.com</a>
+    </div>
+    © 2025 UbicaTuCar
   </footer>
 
 </body>
