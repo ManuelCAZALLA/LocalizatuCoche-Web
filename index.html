@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Guarda tu coche con un toque, vuelve guiado por voz, añade fotos y notas y recibe alertas del parquímetro." />
+  <title>UbicaTuCar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .hero {
+      background-color: #1f2937;
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .btn-appstore {
+      background-color: #0d6efd;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+    }
+    .features li::before {
+      content: "🔹 ";
+    }
+    .screenshots img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>UbicaTuCar</h1>
+    <h2>Aparca, guarda y vuelve fácilmente.</h2>
+    <a href="#" class="btn btn-appstore">Consíguelo en la App Store</a>
+  </section>
+
+  <section class="container my-5">
+    <h3 class="text-center mb-4">Capturas de pantalla</h3>
+    <div class="row screenshots">
+      <div class="col-md-4 mb-3">
+        <img src="screenshot1.png" alt="Captura 1" />
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="screenshot2.png" alt="Captura 2" />
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="screenshot3.png" alt="Captura 3" />
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <p class="lead text-center">
+      Guarda tu coche con un toque, vuelve guiado por voz, añade fotos y notas y recibe alertas del parquímetro.
+    </p>
+
+    <p>
+      <strong>UbicaTuCar</strong> es la forma más rápida y sencilla de recordar dónde ha aparcado tu coche.
+      Con solo un toque, guarda la ubicación exacta de tu vehículo y vuelve a ella fácilmente gracias a la navegación con mapa y guía por voz.
+    </p>
+
+    <ul class="features">
+      <li><strong>Un solo toque para guardar:</strong> marca tu ubicación actual en un instante y olvídate de perder tiempo buscando tu coche.</li>
+      <li><strong>Navegación guiada por voz:</strong> recibe indicaciones precisas en el mapa y con voz para volver a tu coche sin complicaciones.</li>
+      <li><strong>Agrega fotos y notas:</strong> ideal para recordar detalles como columnas, niveles o señales cercanas.</li>
+      <li><strong>Comparte la ubicación:</strong> permite que amigos o familiares encuentren el coche contigo.</li>
+      <li><strong>Parquímetro inteligente:</strong> activa recordatorios y evita multas cuando tu tiempo de estacionamiento está por acabar.</li>
+    </ul>
+  </section>
+
+  <footer class="text-center text-muted py-4">
+    © 2025 UbicaTuCar — contacto@ubicatucar.com
+  </footer>
+
+</body>
+</html>
