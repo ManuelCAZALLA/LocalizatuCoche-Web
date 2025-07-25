@@ -3,41 +3,49 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Guarda tu coche con un toque, vuelve guiado por voz, añade fotos y notas y recibe alertas del parquímetro." />
   <title>Tu Coche Aquí</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="icon" href="icon.png" type="image/png" />
 
+  <!-- Bootstrap & Google Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: system-ui, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Rubik', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
     }
     .hero {
-      background-color: #1f2937;
+      background: linear-gradient(to right, #1f2937, #374151);
       color: white;
-      padding: 4rem 1rem;
+      padding: 5rem 1rem;
       text-align: center;
     }
-    .btn-appstore img {
-      height: 50px;
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
     }
-    .btn-appstore {
-      display: inline-block;
+    .hero h2 {
+      font-weight: 400;
+      font-size: 1.5rem;
       margin-top: 1rem;
     }
-    .features li::before {
-      content: "🔹 ";
+    .btn-appstore img {
+      height: 60px;
+    }
+    .features li::marker {
+      content: "\2714 ";
+      color: #0d6efd;
     }
     .screenshots img {
-      max-width: 100%;
-      border-radius: 1rem;
-      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     .footer-links a {
       margin: 0 1rem;
@@ -47,31 +55,34 @@
     .footer-links a:hover {
       text-decoration: underline;
     }
+    footer {
+      background-color: #f1f3f5;
+    }
   </style>
 </head>
-<body>
 
+<body>
   <section class="hero">
-    <h1>UbicaTuCar</h1>
-    <h2>Aparca, guarda y vuelve fácilmente.</h2>
+    <h1>Tu Coche Aquí</h1>
+    <h2>Aparca, guarda y vuelve con facilidad</h2>
     <a href="#" class="btn-appstore" title="Descargar en App Store">
       <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
     </a>
   </section>
 
   <section class="container my-5">
-    <h3 class="text-center mb-4">Capturas de pantalla</h3>
-    <div class="row screenshots justify-content-center">
-      <div class="col-md-3 col-6 mb-3">
+    <h3 class="text-center fw-bold mb-4">Capturas de Pantalla</h3>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3 col-6">
         <img src="Inicio.png" alt="Inicio" />
       </div>
-      <div class="col-md-3 col-6 mb-3">
+      <div class="col-md-3 col-6">
         <img src="Parquimetro.png" alt="Parquímetro" />
       </div>
-      <div class="col-md-3 col-6 mb-3">
+      <div class="col-md-3 col-6">
         <img src="AparGuar.png" alt="Aparcar y Guardar" />
       </div>
-      <div class="col-md-3 col-6 mb-3">
+      <div class="col-md-3 col-6">
         <img src="Map.png" alt="Mapa" />
       </div>
     </div>
@@ -83,26 +94,24 @@
     </p>
 
     <p>
-      <strong>UbicaTuCar</strong> es la forma más rápida y sencilla de recordar dónde ha aparcado tu coche.
-      Con solo un toque, guarda la ubicación exacta de tu vehículo y vuelve a ella fácilmente gracias a la navegación con mapa y guía por voz.
+      <strong>Tu Coche Aquí</strong> es la forma más inteligente de recordar dónde has aparcado. Guarda tu ubicación con un toque y vuelve fácilmente gracias a guía por voz y mapa interactivo.
     </p>
 
     <ul class="features">
-      <li><strong>Un solo toque para guardar:</strong> marca tu ubicación actual en un instante y olvídate de perder tiempo buscando tu coche.</li>
-      <li><strong>Navegación guiada por voz:</strong> recibe indicaciones precisas en el mapa y con voz para volver a tu coche sin complicaciones.</li>
-      <li><strong>Agrega fotos y notas:</strong> ideal para recordar detalles como columnas, niveles o señales cercanas.</li>
-      <li><strong>Comparte la ubicación:</strong> permite que amigos o familiares encuentren el coche contigo.</li>
-      <li><strong>Parquímetro inteligente:</strong> activa recordatorios y evita multas cuando tu tiempo de estacionamiento está por acabar.</li>
+      <li><strong>Un solo toque para guardar:</strong> registra tu ubicación actual al instante.</li>
+      <li><strong>Navegación guiada por voz:</strong> indicaciones precisas para volver a tu coche.</li>
+      <li><strong>Fotos y notas:</strong> guarda detalles útiles como columnas, plazas o niveles.</li>
+      <li><strong>Comparte ubicación:</strong> permite que amigos o familiares encuentren tu coche.</li>
+      <li><strong>Parquímetro inteligente:</strong> activa recordatorios antes de que expire el tiempo.</li>
     </ul>
   </section>
 
   <footer class="text-center text-muted py-4">
     <div class="footer-links mb-2">
-      <a href="politica-privacidad.html" target="_blank" rel="noopener">Política de Privacidad</a> |
+      <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a> |
       <a href="mailto:contacto@ubicatucar.com">contacto@ubicatucar.com</a>
     </div>
-    © 2025 UbicaTuCar
+    <small>© 2025 Tu Coche Aquí</small>
   </footer>
-
 </body>
 </html>
