@@ -3,104 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Guarda tu coche con un toque, vuelve guiado por voz, añade fotos y notas y recibe alertas del parquímetro." />
+  <meta name="description" content="Aparca, guarda y vuelve fácilmente a tu coche con guía por voz, notas y alertas de parquímetro." />
   <title>Tu Coche Aquí</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="icon.png" />
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="icono.png" type="image/png" />
 
   <style>
+    :root {
+      --bg-gradient: linear-gradient(to bottom right, #1f2937, #111827);
+      --text-light: #ffffff;
+      --text-muted: rgba(255,255,255,0.75);
+      --accent: #3b82f6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, sans-serif;
-      background-color: #f9f9f9;
-    }
-    .hero {
-      background-color: #1f2937;
-      color: white;
-      padding: 4rem 1rem;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+      padding: 2rem 1rem;
     }
-    .app-icon {
-      max-width: 120px;
+
+    header img.icono {
+      width: 100px;
+      height: 100px;
       margin-bottom: 1rem;
+      border-radius: 20%;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
     }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
     .btn-appstore img {
-      height: 50px;
+      height: 60px;
     }
+
+    .features {
+      text-align: left;
+      margin: 3rem auto 2rem;
+      max-width: 600px;
+    }
+
+    .features li {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      list-style: none;
+    }
+
     .features li::before {
-      content: "🔹 ";
+      content: "✅ ";
     }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
     .screenshots img {
       width: 100%;
       border-radius: 1rem;
-      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
     }
-    .footer-links a {
-      margin: 0 1rem;
-      color: #6c757d;
-      text-decoration: none;
+
+    footer {
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      color: var(--text-muted);
     }
-    .footer-links a:hover {
+
+    footer a {
+      color: var(--text-muted);
       text-decoration: underline;
+      margin: 0 0.5rem;
     }
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <img src="icono.png" alt="Tu Coche Aquí Icono" class="app-icon">
+  <header>
+    <img src="icono.png" alt="App Icon" class="icono" />
     <h1>Tu Coche Aquí</h1>
-    <h2>Aparca, guarda y vuelve fácilmente.</h2>
-    <a href="#" class="btn-appstore" title="Descargar en App Store">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+    <h2>Aparca, guarda y vuelve fácilmente</h2>
+    <a class="btn-appstore" href="#">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
     </a>
-  </section>
+  </header>
 
-  <section class="container my-5">
-    <h3 class="text-center mb-4">Capturas de pantalla</h3>
-    <div class="row gy-4 justify-content-center">
-      <div class="col-6 col-md-3">
-        <img src="Inicio.png" alt="Inicio" />
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="Parquimetro.png" alt="Parquímetro" />
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="AparGuar.png" alt="Aparcar y Guardar" />
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="Map.png" alt="Mapa" />
-      </div>
-    </div>
-  </section>
-
-  <section class="container my-5">
-    <p class="lead text-center">
-      Guarda tu coche con un toque, vuelve guiado por voz, añade fotos y notas y recibe alertas del parquímetro.
-    </p>
-
-    <p>
-      <strong>Tu Coche Aquí</strong> es la forma más rápida y sencilla de recordar dónde ha aparcado tu coche.
-      Con solo un toque, guarda la ubicación exacta de tu vehículo y vuelve a ella fácilmente gracias a la navegación con mapa y guía por voz.
-    </p>
-
-    <ul class="features">
-      <li><strong>Un solo toque para guardar:</strong> marca tu ubicación actual en un instante y olvídate de perder tiempo buscando tu coche.</li>
-      <li><strong>Navegación guiada por voz:</strong> recibe indicaciones precisas en el mapa y con voz para volver a tu coche sin complicaciones.</li>
-      <li><strong>Agrega fotos y notas:</strong> ideal para recordar detalles como columnas, niveles o señales cercanas.</li>
-      <li><strong>Comparte la ubicación:</strong> permite que amigos o familiares encuentren el coche contigo.</li>
-      <li><strong>Parquímetro inteligente:</strong> activa recordatorios y evita multas cuando tu tiempo de estacionamiento está por acabar.</li>
+  <section class="features">
+    <ul>
+      <li>Un toque para guardar la ubicación del coche</li>
+      <li>Guía por voz y navegación en mapa</li>
+      <li>Notas y fotos del lugar de aparcamiento</li>
+      <li>Recordatorio del parquímetro</li>
+      <li>Comparte la ubicación fácilmente</li>
     </ul>
   </section>
 
-  <footer class="text-center text-muted py-4">
-    <div class="footer-links mb-2">
-      <a href="politica-privacidad.html" target="_blank" rel="noopener">Política de Privacidad</a> |
+  <section class="screenshots">
+    <img src="Inicio.png" alt="Inicio" />
+    <img src="Parquimetro.png" alt="Parquímetro" />
+    <img src="AparGuar.png" alt="Aparcar y Guardar" />
+    <img src="Map.png" alt="Mapa" />
+  </section>
+
+  <footer>
+    <div>
+      <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>
+      |
       <a href="mailto:contacto@ubicatucar.com">contacto@ubicatucar.com</a>
     </div>
-    © 2025 Tu Coche Aquí
+    <div>© 2025 Tu Coche Aquí</div>
   </footer>
 
 </body>
