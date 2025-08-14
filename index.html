@@ -8,93 +8,140 @@
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ManuelCAZALLA/LocalizatuCoche-Web/main/favicon.png" />
 
   <style>
+    /* Variables de color */
     :root {
-      --bg-gradient: linear-gradient(to bottom right, #1f2937, #111827);
+      --primary: #3b82f6;
+      --bg-dark: #111827;
+      --bg-light: #1f2937;
       --text-light: #ffffff;
       --text-muted: rgba(255,255,255,0.75);
-      --accent: #3b82f6;
+      --card-bg: #1f2937;
+      --radius: 16px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Reset básico */
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: var(--bg-gradient);
+      background: var(--bg-dark);
       color: var(--text-light);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       padding: 2rem 1rem;
+      scroll-behavior: smooth;
     }
 
-    .icono {
-      width: 100px;
-      height: 100px;
+    /* Encabezado */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    header img.icono {
+      width: 120px;
+      height: 120px;
       margin-bottom: 1rem;
-      border-radius: 20%;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      border-radius: 25%;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
     }
+    header img.icono:hover { transform: scale(1.05); }
 
-    h1 {
-      font-size: 2.2rem;
+    header h1 {
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
+      font-weight: 700;
     }
 
-    h2 {
+    header h2 {
       font-weight: 400;
       color: var(--text-muted);
       font-size: 1.2rem;
       margin-bottom: 2rem;
     }
 
-    .btn-appstore img {
-      height: 60px;
+    /* Botón App Store */
+    .btn-appstore {
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
+    .btn-appstore:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow);
+    }
+    .btn-appstore img { height: 60px; }
 
+    /* Sección características */
     .features {
       text-align: left;
-      margin: 3rem auto 2rem;
-      max-width: 600px;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
     }
-
     .features li {
-      margin-bottom: 1rem;
-      line-height: 1.4;
+      background: var(--card-bg);
+      padding: 1rem 1.2rem;
+      border-radius: var(--radius);
       list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.2s, background 0.2s;
     }
-
-    .features li::before {
-      content: "✅ ";
+    .features li:hover {
+      transform: translateY(-3px);
+      background: var(--bg-light);
     }
+    .features li::before { content:"✅"; }
 
+    /* Galería de screenshots */
     .screenshots {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1rem;
-      margin: 2rem 0;
+      max-width: 800px;
+      margin-bottom: 3rem;
     }
-
     .screenshots img {
       width: 100%;
-      border-radius: 1rem;
-      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .screenshots img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
     }
 
+    /* Footer */
     footer {
       font-size: 0.9rem;
       margin-top: 3rem;
       color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
     }
-
     footer a {
       color: var(--text-muted);
       text-decoration: underline;
       margin: 0 0.5rem;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      header h2 { font-size: 1rem; }
     }
   </style>
 </head>
@@ -104,7 +151,7 @@
     <img src="https://raw.githubusercontent.com/ManuelCAZALLA/LocalizatuCoche-Web/main/favicon.png" alt="App Icon" class="icono" />
     <h1>Localiza tu Coche</h1>
     <h2>Aparca, guarda y vuelve fácilmente</h2>
-    <a class="btn-appstore" href="#">
+    <a class="btn-appstore" href="https://apps.apple.com/us/app/localiza-tu-coche/id6749463931" target="_blank" rel="noopener noreferrer">
       <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
     </a>
   </header>
@@ -124,7 +171,7 @@
     <img src="Parking.png" alt="Parquímetro" />
     <img src="Nota.png" alt="Guarda tu Nota" />
     <img src="mapaAC.png" alt="Mapa" />
-     <img src="PopUp.png" alt="PopUp" />
+    <img src="PopUp.png" alt="PopUp" />
   </section>
 
   <footer>
